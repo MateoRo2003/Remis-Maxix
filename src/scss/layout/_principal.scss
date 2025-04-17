@@ -1,0 +1,234 @@
+/* Sección principal (hero) */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+ color: #eae8e8;
+ height: 1000px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+
+/* Carrusel */
+.carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+  height: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  height: 100%;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Fondo fijo para cada slide */
+  background-attachment: fixed;
+}
+
+/* Imágenes asignadas desde el CSS */
+.carousel-slide.slide-1 {
+  background-image: url('../img/cataratas-iguazu.jpg');
+}
+
+.carousel-slide.slide-2 {
+  background-image: url('../img/puerta-templo.jpg');
+}
+
+.carousel-slide.slide-3 {
+  background-image: url('../img/la-aripuca.jpg');
+}
+.carousel-slide.slide-4 {
+  background-image: url('../img/paseo-nautico.jpg');
+}
+
+/* Botones de flecha */
+.carousel-arrow {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: none;
+  font-size: 2.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 3;
+  transition: background 0.3s ease;
+}
+
+.carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-arrow--left {
+  left: 2%;
+}
+
+.carousel-arrow--right {
+  right: 2%;
+}
+
+/* Overlay para oscurecer la imagen */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+/* Navegación superior */
+.navegacion-hero {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2.5rem;
+}
+
+.navegacion-hero .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navegacion-hero .btn-superior {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  background-color: transparent;
+  transition: background-color 0.45s ease-in-out, color 0.45s ease-in-out, transform 0.45s ease-in-out;
+}
+
+.navegacion-hero .btn-superior:hover {
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenido principal central */
+.hero-content {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 1rem;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-content h2 {
+  font-size: 6.5rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.hero-content p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.hero-content .btn-hero {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-content .btn-hero:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Indicador (dots) del carrusel */
+.carousel-counter {
+  margin-top: 1.5rem;
+}
+
+.carousel-counter .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.5;
+  margin: 0 5px;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-counter .dot.active {
+  opacity: 1;
+}
+
+/* Ola SVG */
+.wave {
+  position: absolute;
+  bottom: -150px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 3;
+}
+
+@media (max-width: 1145px) {
+  .wave {
+    bottom: -100px;
+  }
+}
+
+@media (max-width: 760px) {
+  .wave {
+    bottom: -50px;
+  }
+}
+
+@media (max-width: 360px) {
+  .wave {
+    bottom: 0;
+  }
+}
+
+/* Ajustes responsivos para la sección de contenido */
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .navegacion-hero .logo {
+    font-size: 1.5rem;
+  }
+}

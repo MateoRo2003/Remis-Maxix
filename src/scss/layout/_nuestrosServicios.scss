@@ -1,0 +1,110 @@
+/* Variables de paleta y tipografía */
+:root {
+  --clr-fondo-serv: #E2E1DD;
+  --clr-card-bg: #ffffff;
+  --clr-texto: #333333;
+  --clr-texto-sec: #666666;
+  --clr-acento: #008080;
+  --font-base: 'Inter Tight', sans-serif;
+  --radius: 0.75rem;
+  --transition: 0.3s ease;
+}
+
+/* Sección principal */
+.nuestros-servicios {
+  background-color: var(--clr-fondo-serv);
+  padding: 4rem 1rem;
+  font-family: var(--font-base);
+}
+
+/* Título centrado */
+.titulo-servicios {
+  text-align: center;
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+  color: var(--clr-texto);
+}
+
+/* Grid de tarjetas: default auto-fit */
+.contenedor-servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* A partir de 1024px ancho: 3 tarjetas por fila */
+@media (min-width: 1024px) {
+  .contenedor-servicios {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Estilo de cada tarjeta: más espacio interior */
+.servicio {
+  background: var(--clr-card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 3rem 2rem;
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.servicio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Icono centrado y más grande */
+.icono-servicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  margin: 0 auto 1.5rem;
+  font-size: 2.5rem;
+  color: #fff;
+  background-color: var(--clr-acento);
+  border-radius: 50%;
+}
+
+/* Título de la tarjeta */
+.servicio h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--clr-texto);
+}
+
+/* Descripción */
+.servicio p {
+  font-size: 1.125rem;
+  color: var(--clr-texto-sec);
+  line-height: 1.8;
+}
+
+/* Responsive tweaks para muy pantallas pequeñas */
+@media (max-width: 576px) {
+  .nuestros-servicios {
+    padding: 3rem 0.5rem;
+  }
+  .contenedor-servicios {
+    gap: 1.5rem;
+  }
+  .servicio {
+    padding: 2.5rem 1.5rem;
+  }
+  .icono-servicio {
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .servicio h3 {
+    font-size: 1.5rem;
+  }
+  .servicio p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,96 @@
+/* Variables para facilitar cambios en la paleta y tipografía */
+:root {
+  --color-fondo: #f7f7f7;
+  --color-texto: #222;
+  --color-secundario: #555;
+  --color-acento: #3b82f6;
+  --color-pendiente: #f7f7f7;
+  --font-principal: 'Inter Tight', sans-serif;
+  --espaciado-base: 1.5rem;
+}
+
+/* Sección principal */
+.sobre-mi {
+  background-color: #E2E1DD;
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 2.5rem;
+  font-family: var(--font-principal);
+
+  z-index: 2; /* Se mantiene como está */
+ // margin-top: -13vh;
+}
+
+/* Contenedor central y responsive */
+.contenedor-sobre-mi {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr;
+  padding: 0 2rem; /* Añadido padding horizontal al contenedor */
+  margin-bottom: 6rem;
+}
+
+@media (min-width: 768px) {
+  .contenedor-sobre-mi {
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem; /* Aumenté el gap entre las columnas */
+    padding: 0 4rem; /* Aumenté el padding horizontal en pantallas más grandes */
+  }
+}
+
+/* Sección de información personal */
+.info-personal h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-texto);
+}
+
+.info-personal .introduccion {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+  color: var(--color-secundario);
+}
+
+.info-personal p {
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+  color: var(--color-secundario);
+}
+
+/* Sección de beneficios */
+.por-que-elegirnos h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-texto);
+}
+
+.lista-beneficios {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-beneficios li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  color: var(--color-texto);
+  font-size: 1.8rem;
+  transition: transform 0.3s ease;
+}
+
+.lista-beneficios li:hover {
+  transform: translateX(10px);
+}
+
+.icono {
+  width: 24px;
+  height: 24px;
+  fill: var(--color-acento);
+  flex-shrink: 0;
+}

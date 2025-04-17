@@ -1,0 +1,220 @@
+/* Definición de variables para centralizar la paleta de colores */
+:root {
+  --verde-oscuro: #2e5d47;
+  --verde-claro: #a0d6b4;
+  --blanco: #eae8e8;
+  --azul-acento: #00bcd4;
+  --azul-acento-hover: #26c6da;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* Contenedor principal de la sección */
+.contenedor-seccion {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 2rem;
+ margin-top: -6vh;
+  margin-bottom: 2rem;
+}
+
+/* Sección de servicios */
+.servicios-iguazu {
+  background-color: #0A354C;
+  padding: 6rem 2rem;
+  color: var(--blanco);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+// .servicios-iguazu::after {
+//   content: '';
+//   position: absolute;
+//   bottom: 0; /* Se ubica justo debajo de la sección */
+//   left: 0;
+//   width: 100%;
+//   height: 9vw;
+//   background-color: var(--blanco);
+//   transform: skewY(-3deg);
+//   transform-origin: bottom right;
+//   z-index: 1;
+// }
+
+/* Encabezado de la sección */
+.titulo-seccion {
+  padding: 2rem;
+}
+.titulo-seccion h2 {
+  font-size: 3.5rem;
+  /* text-transform: uppercase; */
+  margin-bottom: 0.5rem;
+}
+.titulo-seccion .subtitulo {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 32;
+}
+
+/* Tarjetas de servicio minimalistas */
+.cards-servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card-servicio {
+  border-radius: 10px;
+ // padding: 1.5rem;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+.card-servicio:hover {
+  transform: translateY(-5px);
+}
+
+/* Estilos de texto y botones en las tarjetas */
+.card-servicio h3 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin: 1rem 0;
+}
+.card-servicio p {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  margin: 1rem 0;
+}
+
+.boton-info,
+.boton-principal {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  background: var(--azul-acento);
+  color: var(--blanco);
+  transition: background 0.3s ease;
+}
+
+.boton-info:hover,
+.boton-principal:hover {
+  background: var(--azul-acento-hover);
+}
+
+/* Bloque de descripción principal */
+.descripcion-principal {
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 4rem auto 10rem;
+  text-align: left;
+}
+
+.descripcion-principal h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.descripcion-principal p {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  .titulo-seccion h2 { font-size: 2.5rem; }
+  .titulo-seccion .subtitulo { font-size: 1.3rem; }
+  .descripcion-principal { padding: 1.5rem; margin: 2rem auto; }
+}
+
+@media (max-width: 576px) {
+  .cards-servicios { grid-template-columns: 1fr; }
+  .card-servicio { padding: 1rem; }
+  .card-servicio h3 { font-size: 1.5rem; }
+  .card-servicio p { font-size: 0.9rem; }
+}
+
+/* Diseño base de Uiverse.io adaptado para cards más grandes y naturales */
+.card {
+  position: relative;
+  width: 450px; /* tus dimensiones */
+  height: 300px;
+  //background: linear-gradient(135deg, var(--verde-claro), var(--verde-oscuro));
+  border: 4px solid var(--verde-oscuro);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.card__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* sin rotación */
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: var(--blanco);
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.card:hover .card__content {
+  opacity: 1;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 28px;
+  color: var(--verde-oscuro);
+  font-weight: 700;
+}
+
+.card__description {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.card:hover svg {
+  transform: scale(0); /* solo scale, sin rotar */
+  transition: transform 0.3s ease;
+}
+
+/* Estilos para el contenedor de la imagen */
+.imagen-contenedor {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.imagen-contenedor img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.6s ease;
+}
+
+.card:hover .imagen-contenedor img {
+  opacity: 0.5;  /* Se reduce la opacidad al hacer hover para destacar el contenido */
+}
