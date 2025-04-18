@@ -326,6 +326,8 @@ function activarAnimacionesDeServicios() {
     observer.observe(servicio);
   });
 }
+
+
 function inicializarMapa() {
   var map = L.map('map').setView([-25.5, -54.5], 10);  // Coordenadas centradas en Misiones
 
