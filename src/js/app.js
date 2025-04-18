@@ -326,53 +326,32 @@ function activarAnimacionesDeServicios() {
     observer.observe(servicio);
   });
 }
-
+// Poné tu token aquí
+mapboxgl.accessToken = 'pk.eyJ1IjoiYmFzaWxpbzE1MDMiLCJhIjoiY205bjk3aHZxMHAxdzJscHA5NTg0cHg1dCJ9.3EMU7ojIKrH44pHrIcyXQg';
 
 function inicializarMapa() {
-  var map = L.map('map').setView([-25.5, -54.5], 10);  // Coordenadas centradas en Misiones
+  const centro = [-54.577361, -25.609917];
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
-
-  // Datos de los puntos turísticos
-  var lugares = [
-    {
-      name: 'Cataratas del Iguazú',
-      coords: [-25.695, -54.444],
-    },
-    {
-      name: 'Hito Tres Fronteras',
-      coords: [-25.550, -54.590],
-    },
-    {
-      name: 'Cruz de Santa Ana',
-      coords: [-26.500, -53.970],
-    },
-    {
-      name: 'Ruinas de San Ignacio',
-      coords: [-27.158, -54.712],
-    },
-    {
-      name: 'Minas de Wanda',
-      coords: [-27.360, -54.636],
-    }
-  ];
-
-  // Crear marcadores con los lugares
-  lugares.forEach(function(lugar) {
-    var marker = L.marker(lugar.coords).addTo(map); // Usar el marcador predeterminado
-
-    // Agregar viñeta con nombre de lugar
-    var label = document.createElement('div');
-    label.className = 'marker-label';
-    label.innerHTML = lugar.name;
-    marker._icon.appendChild(label);
-
-    // Mostrar información al pasar el ratón sobre el marcador (sin necesidad de clic)
-    marker.bindTooltip(lugar.name, { permanent: true, direction: 'top', offset: [0, -25] }).openTooltip();
+  const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v12',
+    center: centro,
+    zoom: 13,
+    interactive: false,       // deshabilita toda interacción
+    attributionControl: false // opcional: quita créditos si no los quieres
   });
+
+  // Sólo el marker en tu ubicación
+  new mapboxgl.Marker({ color: '#2e7d32' })
+    .setLngLat(centro)
+    .addTo(map);
 }
+
+document.addEventListener('DOMContentLoaded', inicializarMapa);
+
+
+
+
 
 
 
