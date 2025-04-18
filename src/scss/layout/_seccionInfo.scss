@@ -237,6 +237,15 @@
 }
 
 
+.yaguarate {
+  position: absolute;
+  top: -83px; /* Posición vertical encima del palo */
+  left: 59px; /* Desplaza un poco fuera del palo para que quede justo al borde */
+  width: 110px; /* Ajustá según el tamaño real del PNG */
+  z-index: 3;
+  //animation: perch 4s ease-in-out infinite;
+  transform: scaleX(-1); /* Invierte horizontalmente el jaguar */
+}
 
 
 

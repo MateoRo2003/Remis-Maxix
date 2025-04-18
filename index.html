@@ -8,7 +8,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  
 </head>
 <body>
   
@@ -219,7 +221,7 @@
   </section>
   <div class="divider">
     <div class="stick">
-      <img src="src/img/coati.svg" alt="Tucán" class="coati">
+      <img src="src/img/coati.svg" alt="Coati" class="coati">
       
       <!-- Hojas -->
       <span class="leaf leaf-1"></span>
@@ -297,20 +299,17 @@
     <h2 class="titulo fade-in" id="titulo-principal">Descubre la Magia de Iguazú a tu Propio Ritmo</h2>
 
     <div class="servicios oculto" id="bloques-servicios">
-      <div class="servicio">
-        <i class="fas fa-car-side icono"></i>
-        <h3>Tours Privados Personalizados</h3>
-        <p>Explore Puerto Iguazú a su propio ritmo con itinerarios personalizados y servicios de guía privado.</p>
+      <div class="servicio-fijo">
+        <i class="icono fas fa-car-side icono"></i>
+        <h3>Tours Privados Personalizados</h3>      
       </div>
-      <div class="servicio">
-        <i class="fas fa-route icono"></i>
-        <h3>Viajes culturales e históricos</h3>
-        <p>Sumérgete en la rica historia y cultura de Puerto Iguazú con nuestros tours culturales dirigidos por expertos.</p>
+      <div class="servicio-fijo">
+        <i class="icono fas fa-route icono"></i>
+        <h3>Viajes culturales e históricos</h3>     
       </div>
-      <div class="servicio">
-        <i class="fas fa-tree icono"></i>
-        <h3>Aventuras de Naturaleza y Vida Silvestre</h3>
-        <p>Experimenta la belleza de los paisajes naturales de Iguazú y la diversa vida silvestre con visitas guiadas.</p>
+      <div class="servicio-fijo">
+        <i class="icono fas fa-tree icono"></i>
+        <h3>Aventuras de Naturaleza y Vida Silvestre</h3>      
       </div>
     </div>
   </div>
@@ -348,23 +347,39 @@
   </div>
 </section>
 
+<div class="divider">
+  <div class="stick">
+    <img src="src/img/yaguarate.svg" alt="yaguarate" class="yaguarate">
+    
+    <!-- Hojas -->
+    <span class="leaf leaf-1"></span>
+    <span class="leaf leaf-2"></span>
+    <span class="leaf leaf-3"></span>
+    <span class="leaf leaf-4"></span>
+    <span class="leaf leaf-5"></span>
+    <span class="leaf leaf-6"></span>
+    <span class="leaf leaf-7"></span>
+    <span class="leaf leaf-8"></span>
+    <span class="leaf leaf-9"></span>
+    <span class="leaf leaf-10"></span>
+  </div>
+</div>
 
+
+
+
+
+
+
+
+
+
+
+
+<h2>Mapa de Lugares Turísticos en Misiones</h2>
+<div id="map"></div>
 
 
 <script src="src/js/app.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>

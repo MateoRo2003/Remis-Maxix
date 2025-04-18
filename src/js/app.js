@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
   inicializarCarrusel();
   inicializarSliderTestimonios();
+  activarAnimacionesDeServicios()
+  inicializarMapa();
 });
 
 function inicializarCarrusel() {
@@ -303,4 +305,75 @@ setInterval(() => {
 
   mostrandoTitulo = !mostrandoTitulo;
 }, 6000);
+
+function activarAnimacionesDeServicios() {
+  const servicios = document.querySelectorAll('.servicio');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, i * 150); // delay progresivo para la animación
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.2, // Umbral para detectar cuando las tarjetas entran en el viewport
+  });
+
+  servicios.forEach(servicio => {
+    observer.observe(servicio);
+  });
+}
+function inicializarMapa() {
+  var map = L.map('map').setView([-25.5, -54.5], 10);  // Coordenadas centradas en Misiones
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  // Datos de los puntos turísticos
+  var lugares = [
+    {
+      name: 'Cataratas del Iguazú',
+      coords: [-25.695, -54.444],
+    },
+    {
+      name: 'Hito Tres Fronteras',
+      coords: [-25.550, -54.590],
+    },
+    {
+      name: 'Cruz de Santa Ana',
+      coords: [-26.500, -53.970],
+    },
+    {
+      name: 'Ruinas de San Ignacio',
+      coords: [-27.158, -54.712],
+    },
+    {
+      name: 'Minas de Wanda',
+      coords: [-27.360, -54.636],
+    }
+  ];
+
+  // Crear marcadores con los lugares
+  lugares.forEach(function(lugar) {
+    var marker = L.marker(lugar.coords).addTo(map); // Usar el marcador predeterminado
+
+    // Agregar viñeta con nombre de lugar
+    var label = document.createElement('div');
+    label.className = 'marker-label';
+    label.innerHTML = lugar.name;
+    marker._icon.appendChild(label);
+
+    // Mostrar información al pasar el ratón sobre el marcador (sin necesidad de clic)
+    marker.bindTooltip(lugar.name, { permanent: true, direction: 'top', offset: [0, -25] }).openTooltip();
+  });
+}
+
+
+
+
+
 
