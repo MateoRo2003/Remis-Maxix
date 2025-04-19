@@ -1,4 +1,3 @@
-/* Variables de paleta y tipografía */
 :root {
   --clr-fondo-serv: #E2E1DD;
   --clr-card-bg: #ffffff;
@@ -12,56 +11,49 @@
 
 /* Sección principal */
 .nuestros-servicios {
-  background-color:#F2F2F2;
-  padding: 4rem 1rem;
-  margin: 6rem;
+  background-color: #F2F2F2;
+  padding: clamp(3rem, 6vw, 6rem) 1rem;
+  margin: clamp(3rem, 5vw, 6rem) auto;
   font-family: var(--font-base);
 }
 
 /* Título centrado */
 .titulo-servicios {
   text-align: center;
-  font-size: 3.5rem;
-  margin-bottom: 3rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: clamp(2rem, 4vw, 4rem);
   color: var(--clr-texto);
 }
 
-/* Grid de tarjetas: default auto-fit */
+/* Grid de tarjetas responsive */
 .contenedor-servicios {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-/* A partir de 1024px: exactamente 4 columnas */
-@media (min-width: 1024px) {
-  .contenedor-servicios {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/* Estilo de cada tarjeta */
+/* Tarjeta de servicio */
 .servicio {
-  background: #fdfbfb;
-  border-radius: 1rem;
+  background: var(--clr-card-bg);
+  border-radius: var(--radius);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
-  padding: 2rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
   text-align: center;
   transition: transform var(--transition), box-shadow var(--transition);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   opacity: 0;
-  transform: translateX(-30px); /* Inicialmente desplazada a la izquierda */
+  transform: translateX(-30px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .servicio.visible {
   opacity: 1;
-  transform: translateX(0); /* Se mueve a la posición original */
+  transform: translateX(0);
 }
 
 .servicio:hover {
@@ -69,23 +61,22 @@
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 
-/* Icono centrado y más estilizado */
+/* Icono */
 .icono-servicio {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 4rem;
-  height: 4rem;
+  width: clamp(3rem, 4vw, 5rem);
+  height: clamp(3rem, 4vw, 5rem);
   margin: 0 auto 1.25rem;
-  font-size: 2rem;
+  font-size: clamp(2rem, 3vw, 3rem);
   color: #333;
   border-radius: 50%;
-  //box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Título de la tarjeta */
+/* Título de servicio */
 .servicio h3 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
   margin-bottom: 0.75rem;
   color: var(--clr-texto);
   text-align: center;
@@ -93,97 +84,20 @@
 
 /* Descripción */
 .servicio p {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.375rem);
   color: var(--clr-texto-sec);
   line-height: 1.6;
   text-align: center;
 }
 
-/* Responsive tweaks para pantallas pequeñas */
+/* Mejoras para pantallas pequeñas */
 @media (max-width: 576px) {
-  .nuestros-servicios {
-    padding: 3rem 0.5rem;
-    margin: 6rem;
-  }
   .contenedor-servicios {
+    padding: 0 0.5rem;
     gap: 1.5rem;
   }
-  .servicio {
-    padding: 2.5rem 1.5rem;
-  }
-  .icono-servicio {
-    width: 4rem;
-    height: 4rem;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  .servicio h3 {
-    font-size: 1.5rem;
-  }
-  .servicio p {
-    font-size: 1rem;
-  }
-}
-
-/* Ajustes para tablets (768px) */
-@media (max-width: 768px) {
-  .titulo-servicios {
-    font-size: 3rem;
-    margin-bottom: 2.5rem;
-  }
 
   .servicio {
-    padding: 2rem 1.25rem;
-  }
-
-  .icono-servicio {
-    width: 4.5rem;
-    height: 4.5rem;
-    font-size: 2.25rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .servicio h3 {
-    font-size: 1.75rem;
-  }
-
-  .servicio p {
-    font-size: 1.25rem;
-  }
-}
-
-/* Ajustes para pantallas grandes (mayores a 1200px) */
-@media (min-width: 1200px) {
-  .nuestros-servicios {
-    padding: 5rem 2rem;
-    margin: 6rem;
-  }
-
-  .titulo-servicios {
-    font-size: 4rem;
-    margin-bottom: 4rem;
-  }
-
-  .contenedor-servicios {
-    max-width: 1400px;
-    padding: 0 2rem;
-  }
-
-  .servicio {
-    padding: 2.5rem 2rem;
-  }
-
-  .icono-servicio {
-    width: 5rem;
-    height: 5rem;
-    font-size: 3rem;
-  }
-
-  .servicio h3 {
-    font-size: 2.25rem;
-  }
-
-  .servicio p {
-    font-size: 1.375rem;
+    padding: 2rem 1rem;
   }
 }

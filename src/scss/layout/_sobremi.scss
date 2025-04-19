@@ -8,6 +8,21 @@
   --font-principal: 'Inter Tight', sans-serif;
   --espaciado-base: 1.5rem;
 }
+.sobre-mi h2,
+.sobre-mi .introduccion,
+.sobre-mi p,
+.sobre-mi h3,
+.lista-beneficios li {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.sobre-mi .visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
 
 /* Sección principal */
 .sobre-mi {
@@ -30,14 +45,6 @@ margin: 6rem;
   grid-template-columns: 1fr;
   padding: 0 2rem; /* Añadido padding horizontal al contenedor */
   //margin-bottom: 6rem;
-}
-
-@media (min-width: 768px) {
-  .contenedor-sobre-mi {
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem; /* Aumenté el gap entre las columnas */
-    padding: 0 4rem; /* Aumenté el padding horizontal en pantallas más grandes */
-  }
 }
 
 /* Sección de información personal */
@@ -93,4 +100,88 @@ margin: 6rem;
   height: 24px;
   fill: var(--color-acento);
   flex-shrink: 0;
+}
+
+
+/* RESPONSIVE: Tablets */
+@media (max-width: 1024px) {
+  .sobre-mi {
+    padding: 3rem 2rem;
+    margin: 4rem 2rem;
+  }
+
+  .contenedor-sobre-mi {
+    gap: 4rem;
+    padding: 0 2rem;
+  }
+
+  .info-personal h2 {
+    font-size: 2.2rem;
+  }
+
+  .info-personal .introduccion {
+    font-size: 1.6rem;
+  }
+
+  .info-personal p,
+  .lista-beneficios li {
+    font-size: 1.4rem;
+  }
+
+  .por-que-elegirnos h3 {
+    font-size: 1.8rem;
+  }
+}
+
+/* RESPONSIVE: Móviles */
+@media (max-width: 768px) {
+  .sobre-mi {
+    padding: 3rem 1.5rem;
+    margin: 4rem 1rem;
+  }
+
+  .contenedor-sobre-mi {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 0;
+  }
+
+  .info-personal h2 {
+    font-size: 2rem;
+  }
+
+  .info-personal .introduccion,
+  .lista-beneficios li {
+    font-size: 1.4rem;
+  }
+
+  .info-personal p {
+    font-size: 1.3rem;
+  }
+
+  .por-que-elegirnos h3 {
+    font-size: 1.6rem;
+  }
+
+  .icono {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* RESPONSIVE: Móviles pequeños */
+@media (max-width: 480px) {
+  .info-personal h2 {
+    font-size: 1.8rem;
+  }
+
+  .info-personal .introduccion,
+  .info-personal p,
+  .lista-beneficios li {
+    font-size: 1.2rem;
+  }
+
+  .por-que-elegirnos h3 {
+    font-size: 1.5rem;
+  }
 }

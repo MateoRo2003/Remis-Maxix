@@ -2,6 +2,7 @@ html {
     font-size: 62.5%;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 *, *:before, *:after {
     box-sizing: inherit;

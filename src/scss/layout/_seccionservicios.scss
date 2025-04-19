@@ -6,6 +6,15 @@
   --azul-acento: #00bcd4;
   --azul-acento-hover: #26c6da;
   font-family: 'Helvetica Neue', sans-serif;
+}.card-servicio {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card-servicio.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Contenedor principal de la sección */

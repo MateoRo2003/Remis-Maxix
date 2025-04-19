@@ -241,6 +241,26 @@ const servicios = document.getElementById('bloques-servicios');
 
 let mostrandoTitulo = true;
 
+// Animación de entrada secuencial al hacer scroll
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry, index) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+      }, index * 200); // retrasa cada tarjeta 200ms una tras otra
+      observer.unobserve(entry.target); // para que no se vuelva a animar
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+// Seleccionamos las tarjetas para observar
+document.querySelectorAll('.card-servicio').forEach(card => {
+  observer.observe(card);
+});
+
+// Animación entre título y servicios
 setInterval(() => {
   const startHeight = contenedor.offsetHeight;
 
@@ -306,26 +326,26 @@ setInterval(() => {
   mostrandoTitulo = !mostrandoTitulo;
 }, 6000);
 
-function activarAnimacionesDeServicios() {
-  const servicios = document.querySelectorAll('.servicio');
+// function activarAnimacionesDeServicios() {
+//   const servicios = document.querySelectorAll('.servicio');
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-        }, i * 150); // delay progresivo para la animación
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.2, // Umbral para detectar cuando las tarjetas entran en el viewport
-  });
+//   const observer = new IntersectionObserver((entries) => {
+//     entries.forEach((entry, i) => {
+//       if (entry.isIntersecting) {
+//         setTimeout(() => {
+//           entry.target.classList.add('visible');
+//         }, i * 150); // delay progresivo para la animación
+//         observer.unobserve(entry.target);
+//       }
+//     });
+//   }, {
+//     threshold: 0.2, // Umbral para detectar cuando las tarjetas entran en el viewport
+//   });
 
-  servicios.forEach(servicio => {
-    observer.observe(servicio);
-  });
-}
+//   servicios.forEach(servicio => {
+//     observer.observe(servicio);
+//   });
+// }
 // Poné tu token aquí
 mapboxgl.accessToken = 'pk.eyJ1IjoiYmFzaWxpbzE1MDMiLCJhIjoiY205bjk3aHZxMHAxdzJscHA5NTg0cHg1dCJ9.3EMU7ojIKrH44pHrIcyXQg';
 
@@ -393,6 +413,31 @@ window.addEventListener('scroll', function() {
     nav.classList.remove('sticky');
   }
 });
+function animarAlScroll(selector, delay = 300, threshold = 0.2) {
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, index * delay);
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold });
 
+  document.querySelectorAll(selector).forEach(el => observer.observe(el));
+}
+
+// Aplicar animaciones a varias secciones del sitio
+animarAlScroll('.promo-section .text-content, .promo-section .image-content');
+animarAlScroll('.hero-content h2, .hero-content p, .hero-content .btn-hero, .navegacion-hero .logo, .navegacion-hero .btn-superior');
+animarAlScroll('.testimonios .titulo, .testimonios .intro, .card-testimonio');
+animarAlScroll('.sobre-mi h2, .sobre-mi .introduccion, .sobre-mi p, .sobre-mi h3, .lista-beneficios li');
+
+// ✅ NUEVO: animar las tarjetas de servicio
+animarAlScroll('.servicio');
+animarAlScroll('.map-info');
+
+animarAlScroll('.faq-item');
 
 

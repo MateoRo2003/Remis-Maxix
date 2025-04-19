@@ -9,6 +9,23 @@
   display: flex;
   flex-direction: column;
 }
+/* Animación de entrada */
+.hero-content h2,
+.hero-content p,
+.hero-content .btn-hero,
+.navegacion-hero .logo,
+.navegacion-hero .btn-superior,
+.promo-section .text-content,
+.promo-section .image-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
 
 /* Carrusel */
 .carousel {
