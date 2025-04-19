@@ -441,3 +441,10 @@ animarAlScroll('.map-info');
 animarAlScroll('.faq-item');
 
 
+window.onload = function() {
+  // Reiniciar el scroll al inicio
+  window.scrollTo(0, 0);
+
+  // Limpiar la URL (manteniendo solo el dominio y la ruta)
+  history.replaceState(null, null, window.location.pathname);
+};
