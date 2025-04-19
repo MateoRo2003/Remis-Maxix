@@ -158,7 +158,12 @@
   .promo-section {
     padding: 2rem 2rem;
   }
-
+  .leaf, .toucan, .coati, .yaguarate, .jaguar {
+    display: none;
+  }
+  .stick {
+    display: block; /* Asegura que la ramita sigue visible en pantallas pequeñas */
+  }
   .text-content h1 {
     font-size: 1.8em;
     line-height: 3.8rem;
