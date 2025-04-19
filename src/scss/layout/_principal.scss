@@ -9,6 +9,11 @@
   display: flex;
   flex-direction: column;
 }
+
+.hero-section h1{
+  text-align: center;
+  font-size: 5rem;
+}
 /* Animación de entrada */
 .hero-content h2,
 .hero-content p,
@@ -205,10 +210,12 @@
 
 /* Responsivo: Tablets (≤1024px) */
 @media (max-width: 1024px) {
-  .hero-content h2 {
+  .hero-content h1 {
     font-size: 4.5rem;
     text-align: center;
   }
+
+
   .hero-content p {
     font-size: 1.5rem;
     text-align: center;
@@ -234,7 +241,7 @@
     transform: none;
     padding: 2rem 1rem;
   }
-  .hero-content h2 {
+  .hero-content h1 {
     font-size: 3rem;
     text-align: center;
   }
@@ -277,7 +284,7 @@
 }
 /* Responsivo: Celulares pequeños (≤480px) */
 @media (max-width: 480px) {
-  .hero-content h2 {
+  .hero-content h1 {
     font-size: 2.2rem;
     text-align: center;
   }
@@ -300,7 +307,7 @@
 
 /* Responsivo: Extra pequeño (≤360px) */
 @media (max-width: 360px) {
-  .hero-content h2 {
+  .hero-content h1 {
     font-size: 1.8rem;
   }
   .hero-content p {
