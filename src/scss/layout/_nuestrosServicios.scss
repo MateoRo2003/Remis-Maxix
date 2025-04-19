@@ -12,8 +12,9 @@
 
 /* Sección principal */
 .nuestros-servicios {
-  background-color: var(--clr-fondo-serv);
+  background-color:#F2F2F2;
   padding: 4rem 1rem;
+  margin: 6rem;
   font-family: var(--font-base);
 }
 
@@ -44,7 +45,7 @@
 
 /* Estilo de cada tarjeta */
 .servicio {
-  background: var(--clr-card-bg);
+  background: #fdfbfb;
   border-radius: 1rem;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
   padding: 2rem;
@@ -102,6 +103,7 @@
 @media (max-width: 576px) {
   .nuestros-servicios {
     padding: 3rem 0.5rem;
+    margin: 6rem;
   }
   .contenedor-servicios {
     gap: 1.5rem;
@@ -154,6 +156,7 @@
 @media (min-width: 1200px) {
   .nuestros-servicios {
     padding: 5rem 2rem;
+    margin: 6rem;
   }
 
   .titulo-servicios {

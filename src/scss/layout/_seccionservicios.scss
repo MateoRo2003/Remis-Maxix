@@ -13,7 +13,7 @@
   max-width: 1600px;
   margin: 0 auto;
   padding: 2rem;
- margin-top: -6vh;
+  margin-top: -6vh;
   margin-bottom: 2rem;
 }
 
@@ -25,21 +25,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  z-index: 2;
 }
-
-// .servicios-iguazu::after {
-//   content: '';
-//   position: absolute;
-//   bottom: 0; /* Se ubica justo debajo de la sección */
-//   left: 0;
-//   width: 100%;
-//   height: 9vw;
-//   background-color: var(--blanco);
-//   transform: skewY(-3deg);
-//   transform-origin: bottom right;
-//   z-index: 1;
-// }
 
 /* Encabezado de la sección */
 .titulo-seccion {
@@ -47,7 +33,6 @@
 }
 .titulo-seccion h2 {
   font-size: 3.5rem;
-  /* text-transform: uppercase; */
   margin-bottom: 0.5rem;
 }
 .titulo-seccion .subtitulo {
@@ -66,7 +51,6 @@
 
 .card-servicio {
   border-radius: 10px;
- // padding: 1.5rem;
   transition: transform 0.3s ease;
   text-align: center;
 }
@@ -124,6 +108,12 @@
 }
 
 /* Media Queries para responsividad */
+@media (max-width: 1024px) {
+  .titulo-seccion h2 { font-size: 3rem; }
+  .titulo-seccion .subtitulo { font-size: 1.5rem; }
+  .descripcion-principal { padding: 1.5rem; margin: 2rem auto; }
+}
+
 @media (max-width: 768px) {
   .titulo-seccion h2 { font-size: 2.5rem; }
   .titulo-seccion .subtitulo { font-size: 1.3rem; }
@@ -131,19 +121,22 @@
 }
 
 @media (max-width: 576px) {
-  .cards-servicios { grid-template-columns: 1fr; }
-  .card-servicio { padding: 1rem; }
+  .cards-servicios {
+    grid-template-columns: 1fr;
+  }
+  .card-servicio {
+    padding: 1rem;
+  }
   .card-servicio h3 { font-size: 1.5rem; }
-  .card-servicio p { font-size: 0.9rem; }
+  .card-servicio p { font-size: 1rem; }
 }
 
 /* Diseño base de Uiverse.io adaptado para cards más grandes y naturales */
 .card {
   position: relative;
-  width: 450px; /* tus dimensiones */
-  height: 300px;
-  //background: linear-gradient(135deg, var(--verde-claro), var(--verde-oscuro));
-  border: 4px solid var(--verde-oscuro);
+  width: 100%; /* Ajustado a 100% para ser más flexible */
+  max-width: 450px; /* Se define un máximo para la tarjeta */
+  height: auto; /* Ajusta la altura de acuerdo con el contenido */
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   display: flex;
@@ -152,6 +145,7 @@
   overflow: hidden;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   cursor: pointer;
+  margin: 0 auto;
 }
 
 .card:hover {
@@ -162,7 +156,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* sin rotación */
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
   padding: 20px;
@@ -196,7 +190,7 @@
 }
 
 .card:hover svg {
-  transform: scale(0); /* solo scale, sin rotar */
+  transform: scale(0);
   transition: transform 0.3s ease;
 }
 
@@ -216,5 +210,36 @@
 }
 
 .card:hover .imagen-contenedor img {
-  opacity: 0.5;  /* Se reduce la opacidad al hacer hover para destacar el contenido */
+  opacity: 0.5;
+}
+
+/* Media Queries para tarjetas */
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%; /* Asegura que las tarjetas no excedan el contenedor */
+    height: 250px;
+  }
+
+  .card__title {
+    font-size: 22px;
+  }
+
+  .card__description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    max-width: 100%;
+    height: 220px; /* Ajuste más pequeño en pantallas pequeñas */
+  }
+
+  .card__title {
+    font-size: 18px;
+  }
+
+  .card__description {
+    font-size: 12px;
+  }
 }

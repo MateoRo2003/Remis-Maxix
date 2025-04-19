@@ -1,6 +1,7 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -10,7 +11,7 @@ body {
     font-family: $fuente_secundaria;
     font-size: 1.6rem;
     line-height: 1.8;
-    background-color:#E2E1DD;
+    background-color:#FFFFFF;
 }
 p {
     color: $blanco;

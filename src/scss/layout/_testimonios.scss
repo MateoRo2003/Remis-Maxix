@@ -1,9 +1,10 @@
 /* Sección principal de testimonios */
 .testimonios {
-    background-color: #E3DCD0;
+    background-color: #F2F2F2;
     padding: 4rem 1rem;
     font-family: 'Inter', sans-serif;
     text-align: center; /* Centra texto dentro de .testimonios */
+    margin: 6rem;
    // margin-bottom: 7rem;
   }
   
@@ -58,7 +59,7 @@
   
   /* Cada tarjeta (testimonio) */
   .card-testimonio {
-    background-color: #D7D1C5;
+    background-color: #fdfbfb;
     flex: 0 0 calc(50% - 1rem);
     min-height: 300px;
     min-width:auto;

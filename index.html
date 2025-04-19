@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Remises Iguazu</title>
-  <link rel="stylesheet" href="build/css/app.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <link
-  href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
-  rel="stylesheet"
-/>
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
-  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Maxi Traslados - Remises y Taxis en Puerto Iguazú</title>
+    <meta name="description" content="Maxi Traslados en Puerto Iguazú: Remises seguros y confiables al aeropuerto, Ciudad del Este y Cataratas. ¡Reserva tu traslado fácil y rápido!">
+    <link rel="stylesheet" href="build/css/app.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link
+    href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
+    rel="stylesheet"
+    />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+
 </head>
 <body>
   
-  <section class="hero-section">
+  <section id="inicio" class="hero-section">
   <!-- Carrusel de imágenes -->
   <div class="carousel">
     <div class="carousel-track-container">
@@ -42,7 +43,7 @@
   <!-- Navegación superior -->
   <nav class="navegacion-hero">
     <h1 class="logo">Maxi Traslados</h1>
-    <a href="#contacto" class="btn-superior">Contáctenos</a>
+    <a href="https://wa.me/5493757503394?text=Hola%2C%20estoy%20interesado%2Fa%20en%20contratar%20un%20traslado%20con%20usted.%20%C2%BFPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n%3F" class="btn-superior">Contáctenos</a>
   </nav>
   
   <!-- Contenido principal central -->
@@ -51,7 +52,7 @@
     <p>
       Descubrí la magia de la región con nosotros, en un viaje donde cada traslado es seguro y lleno de experiencias únicas.
     </p>
-    <a href="#contacto" class="btn-hero">Planifica tu tour</a>
+    <a href="#sobre-mi" class="btn-hero">Conocé Maxi Traslados</a>
     <!-- Indicador del carrusel (puntos) -->
     <div class="carousel-counter">
       <span class="dot active"></span>
@@ -66,7 +67,7 @@
   
   <!-- Ola SVG -->
   <svg class="wave" viewBox="0 0 1440 320" preserveAspectRatio="none">
-    <path fill="#E2E1DD" fill-opacity="1" d="M0,96 C240,192 480,32 720,96 C960,160 1200,0 1440,64 L1440,320 L0,320 Z"></path>
+    <path fill="#FFFFFF" fill-opacity="1" d="M0,96 C240,192 480,32 720,96 C960,160 1200,0 1440,64 L1440,320 L0,320 Z"></path>
   </svg>
 
 </section>
@@ -110,47 +111,47 @@
   
   <section class="servicios-iguazu">
     <div class="contenedor-seccion">
-      <div class="titulo-seccion">
-        <h2>El corazón de la Triple Frontera</h2>
-        <p class="subtitulo">Tres culturas, un solo viaje inolvidable.</p>
-      </div>
+        <div class="titulo-seccion">
+          <h2>El corazón de la Triple Frontera</h2>
+          <p class="subtitulo">Tres culturas, un solo viaje inolvidable.</p>
+        </div>
       <div class="cards-servicios">
         <!-- Card 1 -->
-       <!-- Card 1 -->
-<div class="card-servicio card">
-  <div class="imagen-contenedor">
-    <img src="src/img/Cataratas-del-Iguazú.jpg" alt="Cataratas del Iguazú" loading="lazy">
+        <!-- Card 1 -->
+  <div class="card-servicio card">
+    <div class="imagen-contenedor">
+      <img src="src/img/Cataratas-del-Iguazú.jpg" alt="Cataratas del Iguazú" loading="lazy">
+    </div>
+    <div class="card__content">
+      <h3 class="card__title">Cataratas del Iguazú: Pura Naturaleza</h3>
+      <p class="card__description">
+        Visitá las impresionantes Cataratas del Iguazú desde el lado argentino y brasileño. Sentí la bruma en la Garganta del Diablo, caminá por pasarelas inmersas en la selva y viví una de las experiencias más impactantes de Sudamérica.
+      </p>
+    </div>
   </div>
-  <div class="card__content">
-    <h3 class="card__title">Explora las Maravillas de Iguazú</h3>
-    <p class="card__description">
-      Visitá las Cataratas, una de las Siete Maravillas Naturales del Mundo, y disfrutá las vistas panorámicas desde ambos lados. Caminá entre la niebla, sentí la fuerza del agua y conectá con la majestuosidad de la naturaleza en su máxima expresión.
-    </p>
-  </div>
-</div>
 
-<!-- Card 2 -->
-<div class="card-servicio card">
-  <div class="imagen-contenedor">
-    <img src="src/img/selva-iguazu.jpg" alt="Selva Misionera" loading="lazy">
+  <!-- Card 2 -->
+  <div class="card-servicio card">
+    <div class="imagen-contenedor">
+      <img src="src/img/triple-frontier-psx-20191216-152954-large_standard.jpg" alt="Hito Tres Fronteras" loading="lazy">
+    </div>
+    <div class="card__content">
+      <h3 class="card__title">Hito Tres Fronteras: Encuentro de Culturas</h3>
+      <p class="card__description">
+        Conocé el punto donde se encuentran Argentina, Brasil y Paraguay. Disfrutá las vistas al atardecer, la feria de artesanías y los espectáculos de luces mientras aprendés sobre la historia y cultura de esta región única.
+      </p>
+    </div>
   </div>
-  <div class="card__content">
-    <h3 class="card__title">Naturaleza y Aventura</h3>
-    <p class="card__description">
-      Descubrí el Hito Tres Fronteras, las Minas de Wanda y más lugares únicos en plena selva misionera. Viví experiencias auténticas entre ruinas, senderos selváticos y pueblos que guardan historias ancestrales y colores vibrantes.
-    </p>
-  </div>
-</div>
 
 <!-- Card 3 -->
 <div class="card-servicio card">
   <div class="imagen-contenedor">
-    <img src="src/img/compras-culturas.jpeg" alt="Compras y Culturas" loading="lazy">
+    <img src="src/img/duty-free-shop-puerto.jpg" alt="Duty Free Shop" loading="lazy">
   </div>
   <div class="card__content">
-    <h3 class="card__title">Compras y Cultura</h3>
+    <h3 class="card__title">Compras en el Duty Free</h3>
     <p class="card__description">
-      Recorré Ciudad del Este y Foz do Iguaçu, donde la diversidad cultural se mezcla con las mejores oportunidades para comprar. Conocé el Parque das Aves y maravillate con la Represa de Itaipú, una de las obras de ingeniería más imponentes del continente.
+      Visitá el Duty Free Shop de Puerto Iguazú, un espacio exclusivo para hacer compras de perfumes, tecnología, indumentaria y más, en un entorno moderno. Ideal para completar tu viaje con buenos precios y marcas reconocidas.
     </p>
   </div>
 </div>
@@ -158,12 +159,9 @@
       </div>
     </div>
 
-
-
-    
   </section>
   
-  <section class="testimonios">
+  <section id="testimonios" class="testimonios">
     <div class="testimonios-container">
       <!-- Encabezados e introducción -->
       <h4 class="subtitulo">Elogios de los invitados</h4>
@@ -242,8 +240,62 @@
     </div>
   </div>
   
+  <section class="servicios-iguazu">
+    <div class="contenedor-seccion">
+        <div class="titulo-seccion">
+          <h2>Maravillas naturales de Misiones</h2>
+          <p class="subtitulo">Selva, agua y piedra en su máxima expresión.</p>
 
-<section class="sobre-mi">
+        </div>
+      <div class="cards-servicios">
+        <!-- Card 1 -->
+       <!-- Card 1 -->
+<!-- Card 1: Ruinas de San Ignacio -->
+<div class="card-servicio card">
+  <div class="imagen-contenedor">
+    <img src="src/img/puerta-templo.jpg" alt="Ruinas de San Ignacio" loading="lazy">
+  </div>
+  <div class="card__content">
+    <h3 class="card__title">Ruinas Jesuíticas de San Ignacio</h3>
+    <p class="card__description">
+      Viajá al pasado visitando las Ruinas de San Ignacio, uno de los sitios históricos más emblemáticos de Misiones. Explorá los restos de las construcciones jesuíticas, conocé su historia y maravílate con la arquitectura y el entorno natural que las rodea.
+    </p>
+  </div>
+</div>
+
+<!-- Card 2: Minas de Wanda -->
+<div class="card-servicio card">
+  <div class="imagen-contenedor">
+    <img src="src/img/minas-wanda.jpg" alt="Minas de Wanda" loading="lazy">
+  </div>
+  <div class="card__content">
+    <h3 class="card__title">Minas de Wanda: Tesoros Naturales</h3>
+    <p class="card__description">
+      Descubrí las Minas de Wanda, donde podés recorrer túneles y formaciones naturales de piedras semipreciosas. Aprendé sobre el proceso de extracción y llevate recuerdos únicos directo desde la tierra misionera.
+    </p>
+  </div>
+</div>
+
+<!-- Card 3: La Aripuca -->
+<div class="card-servicio card">
+  <div class="imagen-contenedor">
+    <img src="src/img/la-aripuca.jpg" alt="La Aripuca" loading="lazy">
+  </div>
+  <div class="card__content">
+    <h3 class="card__title">La Aripuca: Cultura y Conciencia Ambiental</h3>
+    <p class="card__description">
+      Visitá La Aripuca, una construcción gigante hecha con árboles recuperados que promueve el cuidado del medioambiente. Aprendé sobre la cultura guaraní, disfrutá productos regionales y viví una experiencia educativa y sustentable.
+    </p>
+  </div>
+</div>
+      </div>
+    </div>
+
+
+    
+  </section>
+
+<section id="sobre-mi" class="sobre-mi">
   <h2 class="titulo">Cada viaje comienza con alguien en quien confiar</h2>
 
   <div class="contenedor-sobre-mi">
@@ -252,7 +304,7 @@
 
       <h2>Sobre mí</h2>
       <p class="introduccion">
-        Soy <strong>Maxi</strong>, remisero profesional de Puerto Iguazú con más de 10 años de experiencia. Acompaño a turistas y locales en sus recorridos por Misiones, Brasil y Paraguay, ofreciendo un servicio confiable y personalizado.
+        Soy <strong>Maxi</strong>, remisero profesional de Puerto Iguazú con más de 5 años de experiencia. Acompaño a turistas y locales en sus recorridos por Misiones, Brasil y Paraguay, ofreciendo un servicio confiable y personalizado.
       </p>
       <p>
         Conozco cada rincón de la región y me apasiona ayudar a que cada viaje sea seguro, cómodo y sin estrés.
@@ -322,8 +374,7 @@
 
 
 
-
-<section class="nuestros-servicios">
+<section id="servicios" class="nuestros-servicios">
   <!-- Título centrado -->
   <h2 class="titulo-servicios">Nuestros Servicios</h2>
 
@@ -351,10 +402,9 @@
     </div>
   </div>
 </section>
-
 <div class="divider">
   <div class="stick">
-    <img src="src/img/yaguarate.svg" alt="yaguarate" class="yaguarate">
+    <img src="src/img/yaguarate.svg" alt="Coati" class="yaguarate">
     
     <!-- Hojas -->
     <span class="leaf leaf-1"></span>
@@ -369,29 +419,265 @@
     <span class="leaf leaf-10"></span>
   </div>
 </div>
+<section class="servicios-iguazu">
+  <div class="contenedor-seccion">
+      <div class="titulo-seccion">
+        <h2>Experiencias para todos los gustos</h2>
+        <p class="subtitulo">Compras, aventura y naturaleza en un mismo viaje.</p>
+      </div>
+    <div class="cards-servicios">
+      <!-- Card 1 -->
+    <!-- Card 1 -->
+<div class="card-servicio card">
+  <div class="imagen-contenedor">
+    <img src="src/img/Parque-Das-Aves.jpg" alt="Parque Das Aves" loading="lazy">
+  </div>
+  <div class="card__content">
+    <h3 class="card__title">Encuentro con la naturaleza</h3>
+    <p class="card__description">
+      Caminá entre tucanes, guacamayos y mariposas en el Parque das Aves, un santuario dedicado a la conservación de aves exóticas. Ideal para toda la familia y a pocos minutos de las Cataratas del lado brasileño.
+    </p>
+  </div>
+</div>
 
+<!-- Card 2 -->
+<div class="card-servicio card">
+  <div class="imagen-contenedor">
+    <img src="src/img/Cuidad-del-este.jpeg" alt="Ciudad del Este Shoppings" loading="lazy">
+  </div>
+  <div class="card__content">
+    <h3 class="card__title">Compras sin fronteras</h3>
+    <p class="card__description">
+      Descubrí Ciudad del Este, un paraíso de compras con tecnología, perfumes y moda a precios únicos. Recorremos los shoppings más reconocidos para que aproveches al máximo tu visita.
+    </p>
+  </div>
+</div>
 
+<!-- Card 3 -->
+<div class="card-servicio card">
+  <div class="imagen-contenedor">
+    <img src="src/img/FlyPark.webp" alt="Fly Park" loading="lazy">
+  </div>
+  <div class="card__content">
+    <h3 class="card__title">Diversión en altura</h3>
+    <p class="card__description">
+      Sentí la adrenalina en Fly Park, un parque de aventuras con puentes colgantes, tirolesas y juegos para grandes y chicos. Perfecto para quienes buscan acción en medio de la selva.
+    </p>
+  </div>
+</div>
 
+    </div>
+  </div>
 
-
-
-
-
-
+</section>
+<div class="divider">
+  <div class="stick">
+  </div>
+</div>
 
 <section class="map-wrapper">
   <div id="map"></div>
   <div class="map-info">
-    <h3>Location</h3>
+    <h3>Localización</h3>
     <p>Puerto Iguazú, Misiones, Argentina</p>
   </div>
 </section>
 
+<div class="divider">
+  <div class="stick">
+  </div>
+</div><!-- Sección de FAQs -->
+
+<section class="faq-section">
+  <h2>Respuestas detalladas para tomar decisiones informadas</h2>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>¿Puedo personalizar mi itinerario con Maxi Traslados?</span>
+      <svg class="chevron-icon" viewBox="0 0 24 24">
+        <path d="M6 9l6 6 6-6"/>
+      </svg>
+    </button>
+    <div class="faq-answer">
+      <p>
+        Sí, puedo adaptarme a tus preferencias y ayudarte a armar un itinerario flexible según tus intereses y horarios. Solo tenés que comentarme lo que te gustaría hacer.
+      </p>
+    </div>
+  </div>
+  
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>¿Cómo puedo reservar un tour con Maxi Traslados?</span>
+      <svg class="chevron-icon" viewBox="0 0 24 24">
+        <path d="M6 9l6 6 6-6"/>
+      </svg>
+    </button>
+    <div class="faq-answer">
+      <p>
+        Puedes reservar directamente en línea a través de nuestro sitio web, llamando al +54 376 123 4567 o escribiendo a info@maxitraslados.com; nuestro equipo te asistirá en segundos.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>¿Los tours están disponibles en varios idiomas?</span>
+      <svg class="chevron-icon" viewBox="0 0 24 24">
+        <path d="M6 9l6 6 6-6"/>
+      </svg>
+    </button>
+    <div class="faq-answer">
+      <p>
+        Hablo español y portugués con fluidez. Si necesitás otro idioma, puedo organizarlo con anticipación para asegurar una experiencia cómoda.
+      </p>
+    </div>
+  </div>
 
 
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>¿Con cuánta anticipación debo reservar?</span>
+      <svg class="chevron-icon" viewBox="0 0 24 24">
+        <path d="M6 9l6 6 6-6"/>
+      </svg>
+    </button>
+    <div class="faq-answer">
+      <p>
+        Te recomiendo reservar con al menos 24 horas de anticipación, especialmente en temporada alta, para poder organizar todo con comodidad.
+      </p>
+    </div>
+  </div>
 
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>¿Ofrecés recomendaciones sobre lugares para visitar?</span>
+      <svg class="chevron-icon" viewBox="0 0 24 24">
+        <path d="M6 9l6 6 6-6"/>
+      </svg>
+    </button>
+    <div class="faq-answer">
+      <p>
+        Claro, puedo darte recomendaciones personales sobre atracciones turísticas, restaurantes o actividades, en base a lo que estés buscando.
+      </p>
+    </div>
+  </div>
 
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>¿Hacés traslados al aeropuerto de Foz o Puerto Iguazú?</span>
+      <svg class="chevron-icon" viewBox="0 0 24 24">
+        <path d="M6 9l6 6 6-6"/>
+      </svg>
+    </button>
+    <div class="faq-answer">
+      <p>
+        Sí, ofrezco traslados desde y hacia los aeropuertos de Puerto Iguazú (Argentina), Foz do Iguaçu (Brasil) y también Ciudad del Este (Paraguay) si lo necesitás.
+      </p>
+    </div>
+  </div>
 
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>¿Qué formas de pago aceptás?</span>
+      <svg class="chevron-icon" viewBox="0 0 24 24">
+        <path d="M6 9l6 6 6-6"/>
+      </svg>
+    </button>
+    <div class="faq-answer">
+      <p>
+        Podés pagar en efectivo, por transferencia bancaria o también mediante algunos métodos electrónicos como Mercado Pago. Si tenés dudas, preguntame y vemos la opción más cómoda.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>¿Esperás mientras visito un lugar turístico?</span>
+      <svg class="chevron-icon" viewBox="0 0 24 24">
+        <path d="M6 9l6 6 6-6"/>
+      </svg>
+    </button>
+    <div class="faq-answer">
+      <p>
+        Sí, si lo coordinamos con anticipación puedo esperarte mientras visitás un lugar, y después te llevo de regreso o al próximo destino. El tiempo de espera se acuerda previamente.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      <span>¿Ofrecés traslados entre países?</span>
+      <svg class="chevron-icon" viewBox="0 0 24 24">
+        <path d="M6 9l6 6 6-6"/>
+      </svg>
+    </button>
+    <div class="faq-answer">
+      <p>
+        Sí, puedo hacer traslados entre Argentina, Brasil y Paraguay, cruzando por los pasos fronterizos habilitados. Solo necesitás tener tus documentos en regla para pasar migraciones.
+      </p>
+    </div>
+  </div>
+</section>
+
+<a href="https://wa.me/5493757503394?text=Hola%2C%20estoy%20interesado%2Fa%20en%20contratar%20un%20traslado%20con%20usted.%20%C2%BFPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n%3F" class="whatsapp-icon" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
 <script src="src/js/app.js"></script>
+
+
+
+<footer class="footer">
+  <div class="contenedor-footer">
+    <div class="footer-info">
+      <h3 class="footer-logo">
+        <img src="src/img/Logo-Maxi.jpg" alt="Logo Maxi Traslados" class="logo-footer">
+       
+      </h3>
+      <p>
+        Remises seguros y personalizados en Puerto Iguazú, Misiones. Más de 5 años brindando confianza, puntualidad y atención personalizada en cada traslado.
+      </p>
+    </div>
+
+    <div class="footer-contacto">
+      <h4>Contacto</h4>
+      <ul>
+        <li><i class="fas fa-phone-alt"></i> +54 9 3757 50-3394</li>
+        <li><i class="fas fa-envelope"></i> maxi@trasladosiguazu.com</li>
+        <li><i class="fas fa-map-marker-alt"></i> Puerto Iguazú, Misiones, Argentina</li>
+      </ul>
+    </div>
+
+    <div class="footer-enlaces">
+      <h4>Enlaces rápidos</h4>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre Mí</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-redes">
+      <h4>Seguinos</h4>
+      <div class="iconos-redes">
+        <a href="https://wa.me/5493757503394?text=Hola%2C%20estoy%20interesado%2Fa%20en%20contratar%20un%20traslado%20con%20usted.%20%C2%BFPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/maxitraslados" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/maxitraslados" target="_blank"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-copy">
+    <p>&copy; 2025 Maxi Traslados. Todos los derechos reservados.</p>
+    <p class="desarrollado-por">
+      Sitio web desarrollado por <a href="https://www.linkedin.com/in/mateo-rojas-ba696926b/" target="_blank">Mateo Rojas</a>
+    </p>
+  </div>
+</footer>
+
+
+
+
 </body>
 </html>

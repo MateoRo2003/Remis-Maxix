@@ -1,0 +1,136 @@
+.footer {
+    background-color: #111827;
+    color: #e5e7eb;
+    padding: 5rem 1rem 3rem;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .contenedor-footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-logo {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .footer h4 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .footer p,
+  .footer li,
+  .footer a {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #d1d5db;
+    line-height: 1.8;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    color: #60a5fa;
+    text-decoration: underline;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .iconos-redes {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  .logo-footer {
+    height: 100px; /* Ajustá según tu necesidad */
+    width: 190px;
+    vertical-align: middle;
+   margin-left: 4rem;
+    text-align: center;
+  }
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .iconos-redes a {
+    font-size: 1.8rem;
+    color: #9ca3af;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .iconos-redes a:hover {
+    color: #60a5fa;
+    transform: scale(1.2);
+  }
+  
+  .footer-copy {
+    text-align: center;
+    margin-top: 3rem;
+    border-top: 1px solid #374151;
+    padding-top: 2rem;
+    font-size: 1rem;
+    color: #9ca3af;
+    line-height: 1.6;
+  }
+  
+  .footer-copy a {
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .footer-copy a:hover {
+    text-decoration: underline;
+  }
+  
+  .whatsapp-icon {
+    position: fixed;
+    width: 54px;
+    height: 54px;
+    bottom: 25px;
+    right: 32px;
+    background: linear-gradient(135deg, #0f4c5c, #1b7f8c); /* De petróleo oscuro a celeste frío */
+    color: #e8f1f2; /* Celeste hielo */
+    border-radius: 50%;
+    text-align: center;
+    font-size: 28px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    z-index: 59;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .whatsapp-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    background: linear-gradient(135deg, #13677b, #20a4af); /* Tono más vivo al hacer hover */
+  }
+  
+  /* Para dispositivos móviles */
+  @media only screen and (max-width: 768px) {
+    .whatsapp-icon {
+      width: 44px;
+      height: 44px;
+      font-size: 22px;
+    }
+  }
+  

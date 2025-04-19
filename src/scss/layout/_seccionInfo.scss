@@ -1,142 +1,17 @@
-// /* Sección de información */
-// .seccion-informacion {
-//     position: relative; /* Necesario para que ::after se posicione relativo a esta sección */
-//     background-color: rgb(234, 232, 232);
-//     padding: 4rem 2rem;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//    // margin-top: -9vh;
-//     overflow: hidden; /* Esto asegura que la pendiente no desborde */
-//     z-index: 3;
-// }
-
-// .seccion-informacion::after {
-//     content: '';
-//     position: absolute;
-//     bottom: 0; /* Anclado al fondo */
-//     left: 0;
-//     width: 100%;
-//     height: 9vw;
-//     background-color: rgb(81, 130, 104); //linear-gradient(135deg, var(--verde-oscuro) 0%, var(--verde-claro) 86%);
-
-//     transform: skewY(3deg); /* Pendiente hacia la derecha */
-//     transform-origin: bottom left;
-//     z-index: 1;
-// }
-// .contenedor-informacion {
-//     display: grid;
-//     grid-template-columns: 1.5fr 1fr;
-//     gap: 5rem;
-//     max-width: 1200px;
-//     margin: 0 auto;
-//     align-items: center;
-//     z-index: 2; /* Asegura que quede encima de la pendiente */
-//     position: relative;
-//     margin-bottom: 25rem;
-//     margin-top: 6rem;
-// }
-
-
-  
-//   /* Texto de la información */
-//   .texto-informacion {
-//     max-width: 700px; /* Define un ancho máximo */
-//     text-align: left;
-//   }
-  
-//   .texto-informacion h2 {
-//     font-size: 4.5rem;
-//     line-height: 5rem;
-//     font-weight: bold;
-//     margin-bottom: 1.5rem;
-//     color: #333; /* Color oscuro para buen contraste */
-//   }
-  
-//   .texto-informacion p {
-//     font-size: 1.8rem;
-//     line-height: 3rem;
-//     margin-bottom: 1rem;
-//     color: #555;
-//   }
-  
-//   .boton-informacion {
-//     background-color:#386641;
-//     color: white;
-//     padding: 0.8rem 1.5rem;
-//     border-radius: 5px;
-//     font-size: 1.4rem;
-//     text-decoration: none;
-//     font-weight: bold;
-//     transition: all 0.3s ease;
-//   }
-  
-//   .boton-informacion:hover {
-//     background-color: #234a40;
-//     transform: scale(1.05);
-//   }
-  
-//   /* Imagen de información */
-//   .imagen-informacion {
-//     display: flex;
-//     justify-content: center;
-//     width: 656px;
-//   }
-  
-//   .imagen-informacion img {
-//     max-width: 82%; /* Asegura que la imagen no exceda el contenedor */
-//     height: 340px; /* Mantiene la proporción */
-//     border-radius: 10px; /* Bordes suaves */
-//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade sombra */
-//   }
-  
-//   .foto-polaroid {
-//     text-align: center;
-//   }
-  
-//   .foto-polaroid img {
-//     max-width: 500px;
-//     margin-bottom: 0.5rem;
-//   }
-  
-//   .leyenda-foto {
-//     font-size: 1.2rem;
-//     color: #666;
-//     font-style: italic;
-//   }
-  
-//   /* Responsive Design */
-//   @media (max-width: 768px) {
-//     .contenedor-informacion {
-//       grid-template-columns: 1fr; /* Una sola columna en móviles */
-//       text-align: center;
-//     }
-  
-//     .texto-informacion {
-//       margin-bottom: 2rem;
-//     }
-  
-//     .imagen-informacion img {
-//       max-width: 300px; /* Ajusta el tamaño de la imagen para pantallas pequeñas */
-//     }
-//   }
-
-
 .promo-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4rem 6rem; /* Espacio igual a izquierda y derecha */
-  background-color:#E2E1DD;
+  padding: 4rem 6rem;
+  background-color: #F2F2F2;
   z-index: 2;
-  margin-bottom: 10rem;
-  margin-top: 6rem;
+  margin: 6rem 0;
+  flex-wrap: wrap; /* Asegura que el contenido se ajuste en pantallas pequeñas */
 }
 
 .text-content {
   max-width: 50%;
-  //margin-bottom: 13rem;
-  /* Quitamos margin-left */
+  padding-right: 2rem;
 }
 
 .text-content h1 {
@@ -144,19 +19,16 @@
   margin-bottom: 20px;
   color: #333;
   line-height: 4.5rem;
-  /* width innecesario, mejor usar auto */
 }
 
 .text-content p {
   font-size: 1em;
   line-height: 1.5;
   color: #333;
-  /* width también innecesario si usamos max-width */
 }
 
 .image-content {
   max-width: 50%;
- // margin-bottom: 8rem;
 }
 
 .image-content img {
@@ -164,14 +36,12 @@
   border-radius: 32px;
 }
 
-
 .divider {
   display: flex;
   justify-content: center;
   width: 100%;
   margin: 6rem 0 3rem;
   z-index: 4;
-  margin-bottom: 1rem;
 }
 
 .stick {
@@ -181,10 +51,9 @@
   height: 10px;
   background: linear-gradient(90deg, #7b4b28, #a46f48);
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Base hoja */
 .leaf {
   position: absolute;
   width: 16px;
@@ -195,7 +64,6 @@
   transform-origin: center;
 }
 
-/* Variaciones de color natural */
 .leaf:nth-child(1) { background-color: #4caf50; top: -8px; left: 5%; animation-delay: 0s; }
 .leaf:nth-child(2) { background-color: #66bb6a; bottom: -8px; left: 12%; transform: rotate(-45deg); animation-delay: 0.2s; }
 .leaf:nth-child(3) { background-color: #81c784; top: -8px; left: 22%; animation-delay: 0.4s; }
@@ -205,58 +73,142 @@
 .leaf:nth-child(7) { background-color: #4caf50; top: -8px; left: 66%; animation-delay: 1.2s; }
 .leaf:nth-child(8) { background-color: #81c784; bottom: -8px; left: 76%; transform: rotate(-45deg); animation-delay: 1.4s; }
 .leaf:nth-child(9) { background-color: #66bb6a; top: -8px; left: 87%; animation-delay: 1.6s; }
-.leaf:nth-child(10){ background-color: #388e3c; bottom: -8px; right: 2%; transform: rotate(-45deg); animation-delay: 1.8s; }
+.leaf:nth-child(10) { background-color: #388e3c; bottom: -8px; right: 2%; transform: rotate(-45deg); animation-delay: 1.8s; }
 
-/* Animación tipo viento */
 @keyframes wiggle {
-  0%, 100% {
-    transform: rotate(45deg) translateY(0);
-  }
-  50% {
-    transform: rotate(45deg) translateY(-2px);
-  }
+  0%, 100% { transform: rotate(45deg) translateY(0); }
+  50% { transform: rotate(45deg) translateY(-2px); }
 }
 
-
-.toucan {
+.toucan, .coati, .yaguarate, .jaguar {
   position: absolute;
-  top: -68px; /* Posición vertical encima del palo */
-  left: 1px; /* Desplaza un poco fuera del palo para que quede justo al borde */
-  width: 110px; /* Ajustá según el tamaño real del PNG */
-  z-index: 3;
-  //animation: perch 4s ease-in-out infinite;
+  width: 110px;
+  z-index: 1;
+  animation: perch 4s ease-in-out infinite;
 }
 
-
-.coati {
-  position: absolute;
-  top: -74px; /* Posición vertical encima del palo */
-  left: 1056px; /* Desplaza un poco fuera del palo para que quede justo al borde */
-  width: 110px; /* Ajustá según el tamaño real del PNG */
-  z-index: 3;
-  //animation: perch 4s ease-in-out infinite;
-}
-
-
-.yaguarate {
-  position: absolute;
-  top: -83px; /* Posición vertical encima del palo */
-  left: 59px; /* Desplaza un poco fuera del palo para que quede justo al borde */
-  width: 110px; /* Ajustá según el tamaño real del PNG */
-  z-index: 3;
-  //animation: perch 4s ease-in-out infinite;
-  transform: scaleX(-1); /* Invierte horizontalmente el jaguar */
-
-}
+.toucan { top: -64px; left: 1px; }
+.coati { top: -74px; left: 1056px; }
+.yaguarate { top: -83px; left: 59px; transform: scaleX(-1); }
+.jaguar { top: -83px; left: 1200px !important; }
 
 
 
-/* Animación suave como si se moviera por el viento */
-@keyframes perch {
-  0%, 100% {
-    transform: translateY(0);
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .promo-section {
+    padding: 3rem 4rem;
+    flex-direction: column;
+    text-align: center;
   }
-  50% {
-    transform: translateY(-4px);
+
+  .text-content,
+  .image-content {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .text-content h1 {
+    font-size: 2.2em;
+    line-height: 4.2rem;
+  }
+
+  .text-content p {
+    font-size: 1.1em;
+  }
+
+  .divider {
+    margin: 3rem 0 2rem;
+  }
+
+  .stick {
+    max-width: 100%;
+    height: 8px;
+  }
+
+  .toucan, .coati, .yaguarate, .jaguar {
+    width: 90px;
+  }
+  .toucan{
+    top: -54px;
+  }
+  .coati{
+    left: 600px;
+    top: -61px;
+  }
+  .yaguarate{
+    left: 50px;
+    top: -69px;
+  }
+}
+
+@media (max-width: 768px) {
+  .promo-section {
+    padding: 2rem 2rem;
+  }
+
+  .text-content h1 {
+    font-size: 1.8em;
+    line-height: 3.8rem;
+    text-align: center;
+  }
+
+  .text-content p {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .image-content img {
+    border-radius: 20px;
+  }
+
+  .toucan, .coati, .yaguarate, .jaguar {
+    width: 80px;
+  }
+  .toucan{
+    top: -44px;
+  }
+  .coati{
+    left: 350px;
+    top: -51px;
+  }
+  .yaguarate{
+    left: 40px;
+    top: -59px;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-section {
+    padding: 1.5rem 1rem;
+    
+  }
+
+  .text-content h1 {
+    font-size: 1.5em;
+    line-height: 3.5rem;
+  }
+
+  .text-content p {
+    font-size: 0.9em;
+  }
+
+  .image-content img {
+    border-radius: 15px;
+  }
+
+  .toucan, .coati, .yaguarate, .jaguar {
+    width: 70px;
+  }
+  .toucan{
+    top: -43px;
+  }
+  .yaguarate{
+    left: 30px;
+    top: -52px;
+  }
+  .coati{
+    left: 300px;
+    top: -47px;
   }
 }

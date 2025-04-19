@@ -336,7 +336,7 @@ function inicializarMapa() {
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v12',
     center: coordenadas,
-    zoom: 14,
+    zoom: 16,
     dragPan: false,
     scrollZoom: false,
     doubleClickZoom: false,
@@ -350,20 +350,49 @@ function inicializarMapa() {
     visualizePitch: false
   }), 'top-left');
 
+  // Aplicar z-index bajo a los controles de zoom
+  const zoomControls = document.querySelector('.mapboxgl-ctrl-group');  // Contenedor de los controles de zoom
+  if (zoomControls) {
+    zoomControls.style.zIndex = '0';  // Establecer z-index bajo
+  }
+
   // Agregar marker
   new mapboxgl.Marker({ color: '#2e7d32' })
     .setLngLat(coordenadas)
     .addTo(map);
 }
 
+
 document.addEventListener('DOMContentLoaded', inicializarMapa);
 
 
 
 
+document.querySelectorAll('.faq-item').forEach(item => {
+  const btn = item.querySelector('.faq-question');
+
+  btn.addEventListener('click', () => {
+    const isActive = item.classList.contains('active');
+
+    // Cierra todos
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+    // Abre solo si no estaba abierta antes
+    if (!isActive) {
+      item.classList.add('active');
+    }
+  });
+});
 
 
-
+window.addEventListener('scroll', function() {
+  const nav = document.querySelector('.navegacion-hero');
+  if (window.scrollY > 100) { // 100px de desplazamiento, ajusta según lo que necesites
+    nav.classList.add('sticky');
+  } else {
+    nav.classList.remove('sticky');
+  }
+});
 
 
 
