@@ -162,7 +162,7 @@
     display: none;
   }
   .stick {
-    display: block; /* Asegura que la ramita sigue visible en pantallas pequeñas */
+    display: none; /* Asegura que la ramita sigue visible en pantallas pequeñas */
   }
   .text-content h1 {
     font-size: 1.8em;
