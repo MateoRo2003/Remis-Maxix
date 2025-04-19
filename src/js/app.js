@@ -330,20 +330,29 @@ function activarAnimacionesDeServicios() {
 mapboxgl.accessToken = 'pk.eyJ1IjoiYmFzaWxpbzE1MDMiLCJhIjoiY205bjk3aHZxMHAxdzJscHA5NTg0cHg1dCJ9.3EMU7ojIKrH44pHrIcyXQg';
 
 function inicializarMapa() {
-  const centro = [-54.577361, -25.609917];
+  const coordenadas = [-54.577361, -25.609917];
 
   const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v12',
-    center: centro,
-    zoom: 13,
-    interactive: false,       // deshabilita toda interacción
-    attributionControl: false // opcional: quita créditos si no los quieres
+    center: coordenadas,
+    zoom: 14,
+    dragPan: false,
+    scrollZoom: false,
+    doubleClickZoom: false,
+    touchZoomRotate: false,
+    attributionControl: false
   });
 
-  // Sólo el marker en tu ubicación
+  // Agregar controles de zoom solamente
+  map.addControl(new mapboxgl.NavigationControl({
+    showCompass: false,
+    visualizePitch: false
+  }), 'top-left');
+
+  // Agregar marker
   new mapboxgl.Marker({ color: '#2e7d32' })
-    .setLngLat(centro)
+    .setLngLat(coordenadas)
     .addTo(map);
 }
 
