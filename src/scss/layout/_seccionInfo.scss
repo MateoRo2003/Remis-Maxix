@@ -120,7 +120,7 @@
     margin-bottom: 2rem;
   }
 
-  .text-content h1 {
+  .text-content h2 {
     font-size: 2.2em;
     line-height: 4.2rem;
   }
@@ -164,7 +164,7 @@
   .stick {
     display: none; /* Asegura que la ramita sigue visible en pantallas pequeñas */
   }
-  .text-content h1 {
+  .text-content h2 {
     font-size: 1.8em;
     line-height: 3.8rem;
     text-align: center;
@@ -205,7 +205,9 @@
     font-size: 1.5em;
     line-height: 3.5rem;
   }
-
+h2{
+  text-align: center;
+}
   .text-content p {
     font-size: 0.9em;
   }
