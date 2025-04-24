@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   inicializarCarrusel();
   inicializarSliderTestimonios();
-  activarAnimacionesDeServicios()
+  // activarAnimacionesDeServicios()
   inicializarMapa();
 });
 
